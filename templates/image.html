@@ -1,0 +1,21 @@
+{% extends 'bootstrap/base.html' %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}">
+{% endblock %}
+
+{% block title %}Color Pallet of an Image{% endblock %}
+
+{% block content %}
+<h2>Your Color Pallet</h2>
+<div class="d-flex">
+    <img class="image" src="{{path}}" width="400">
+    <div class="column">
+        {% for color in pallete %}
+        <div class="d-flex"><div style="background-color: rgba{{color}}; width: 50px; height: 50px; margin: auto 10px;"></div> <span style="margin: auto; font-size: 1.3em; color: {{'#{:02x}{:02x}{:02x}'.format(color[0],color[1],color[2])}};">{{'#{:02x}{:02x}{:02x}'.format(color[0],color[1],color[2])}}</span></div>
+        {% endfor %}
+    </div>
+</div>
+<a href="/" class="btn">Get Color Pallet from Another Image</a>
+{% endblock %}

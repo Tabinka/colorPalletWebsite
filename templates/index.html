@@ -1,0 +1,17 @@
+{% extends 'bootstrap/base.html' %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}">
+{% endblock %}
+
+{% block title %}Upload your image...{% endblock %}
+
+{% block content %}
+<h2>Get Color Pallet from Image</h2>
+<form method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <label for="file"></label>
+   <input id="file" name="file" type="file" onchange="this.form.submit()">
+</form>
+{% endblock %}

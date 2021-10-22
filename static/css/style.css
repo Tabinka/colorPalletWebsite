@@ -1,0 +1,78 @@
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    background: #E4FBFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+h2{
+    font-size: 4em;
+    text-align: center;
+    color: #3399db;
+    font-weight: bold;
+}
+
+form{
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+form label{
+    display: block;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    background: url("https://www.freeiconspng.com/uploads/upload-icon-3.png") center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+form input{
+    text-align: center;
+    margin: auto;
+}
+
+form #file{
+    display: none
+}
+
+.btn{
+    width: 600px;
+    padding: 10px;
+    border: 2px solid #3399db;
+    background: none;
+    color: #3399db;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.d-flex{
+    display: flex;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.image{
+    padding: 5px;
+    border: 2px solid #3399db;
+}
